@@ -3,7 +3,7 @@ import * as tokenService from '../services/tokenService';
 import { backEndPoint } from '../utils/common';
 
 const instance = axios.create({
-    baseURL: 'http://localhost:8080/api',
+    baseURL: process.env.REACT_APP_BACKEND_URL,
     headers: {
         'content-type': 'application/json',
     },
@@ -12,7 +12,7 @@ const instance = axios.create({
 instance.interceptors.request.use(
     (config) => {
         const token = tokenService.getLocalAccessToken();
-        console.log('token ....', token);
+        console.log('process.env.REACT_APP_BACKEND_URL ....', process.env.REACT_APP_BACKEND_URL);
         if (token) {
             // config.headers["Authorization"] = 'Bearer ' + token;  // for Spring Boot back-end
             config.headers['authorization'] = 'Bearer ' + token; // for Node.js Express back-end
