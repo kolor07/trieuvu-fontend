@@ -1,0 +1,31 @@
+.wrapper {
+    display: grid;
+    gap: 5px;
+    // height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: 212px;
+    grid-template-rows: auto 600px 3fr 180px;
+    grid-template-areas:
+        'header header header header'
+        'slideShow slideShow slideShow slideShow'
+        'content content content content'
+        ' footer footer footer footer';
+}
+
+.header {
+    grid-area: header;
+}
+.slideshow {
+    grid-area: slideShow;
+    max-height: 600px;
+
+    // align-items: center;
+}
+.main-content {
+    grid-area: content;
+    background: #f7f7f7;
+    height: auto;
+}
+.footer {
+    grid-area: footer;
+}

@@ -1,0 +1,154 @@
+@import 'normalize.css';
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@import './variables';
+@import './functions';
+@import './mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    // font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizespeed;
+    color: $text-color;
+    overflow-y: overlay;
+}
+.container {
+    max-width: 1200px;
+}
+// // Fonts emmbeded
+// @font-face {
+//     font-family: 'Open Sans';
+//     src: url('/assets/fonts/OpenSans-Light.ttf');
+//     font-weight: 300;
+// }
+// @font-face {
+//     font-family: 'Open Sans';
+//     src: url('/assets/fonts/OpenSans-Medium.ttf');
+//     font-weight: 400;
+// }
+// @font-face {
+//     font-family: 'Open Sans';
+//     src: url('/assets/fonts/OpenSans-SemiBold.ttf');
+//     font-weight: 600;
+// }
+
+// @font-face {
+//     font-family: 'Open Sans';
+//     src: url('/assets/fonts/OpenSans-Bold.ttf');
+//     font-weight: 700;
+// }
+
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        color: inherit;
+    }
+}
+button,
+input {
+    outline: none;
+    border: none;
+}
+
+.btn-default {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 12px 44px;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 25px;
+    border: 1px solid #232323;
+}
+
+.btn-lg {
+    width: 200px;
+    height: 42px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.input-sm {
+    font-size: 15px;
+    line-height: 12px;
+    padding: 0px 0px;
+    max-width: 40px;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: transparent;
+    color: #232323;
+}
+
+.btn-outline {
+    display: inline-block;
+    width: 100%;
+    min-width: 180px;
+    min-height: 50px;
+    line-height: 40px;
+    border: 1px solid rgb(9, 9, 9);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #fff;
+
+    &:hover {
+        color: #fff;
+        background-color: rgb(9, 9, 9);
+    }
+}
+.btn-inline {
+    display: inline-block;
+    width: 100%;
+    min-width: 180px;
+    min-height: 50px;
+    line-height: 40px;
+    border: 1px solid rgb(9, 9, 9);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: rgb(9, 9, 9);
+    color: #fff;
+    transition: 0.3s;
+    &:hover {
+        font-size: 16px;
+    }
+}
+
+@keyframes realVisibility {
+    from {
+        visibility: hidden;
+        opacity: 0.5;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}

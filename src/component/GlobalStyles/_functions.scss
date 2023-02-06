@@ -1,0 +1,8 @@
+@function getWidth($item) {
+    @return 100% / $item;
+}
+
+// Colors
+@function to-rgb($value) {
+    @return red($value), green($value), blue($value);
+}

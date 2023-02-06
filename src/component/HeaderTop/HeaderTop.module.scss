@@ -1,0 +1,248 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../GlobalStyles/GlobalStyles.scss';
+
+.header_top-container {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    .header_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #eee;
+        width: 1200px;
+        background-color: #fff;
+        span {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        li {
+            display: inline-block;
+            font-size: 1.3rem;
+            padding: 10px 5px;
+        }
+
+        .header_contact_us {
+            & .phone_icon,
+            .email_icon {
+                margin-right: 5px;
+                color: rgba(21, 8, 8, 0.5);
+            }
+        }
+        .header_account_area {
+            & ul:first-child {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            & li {
+                display: inline-block;
+                position: relative;
+                padding: 0 20px;
+                border-left: 1px solid #eee;
+                cursor: pointer;
+                & span {
+                    font-size: 1.3rem;
+                    line-height: 40px;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    &:hover {
+                        // color: #febc8b;
+                        color: $primary;
+                    }
+                }
+
+                &:last-child {
+                    border-right: 1px solid #eee;
+                }
+            }
+            .user_signined {
+                position: relative;
+                display: list-item;
+                &:hover {
+                    & .dropdown_language {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+                & .dropdown_language {
+                    position: absolute;
+                    top: 105%;
+                    right: 0;
+                    min-width: 150px;
+                    background-color: #fff;
+                    border: 1px solid #ededed;
+                    text-align: left;
+                    overflow: hidden;
+                    z-index: 999;
+
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: visibility 0.3s ease, opacity 0.3s ease;
+
+                    & li {
+                        width: 100%;
+                        border-left: none;
+                        border-bottom: 1px solid #ededed;
+
+                        &:last-child {
+                            border-right: none;
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+
+            .language_currency {
+                position: relative;
+                display: list-item;
+                &:hover {
+                    & .dropdown_language {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+                .language_currency_icon {
+                    font-size: 1.2rem;
+                    color: rgba(21, 8, 8, 0.5);
+                    margin-left: 3px;
+                }
+                & .dropdown_language {
+                    position: absolute;
+                    top: 105%;
+                    right: 0;
+                    min-width: 150px;
+                    background-color: #fff;
+                    border: 1px solid #ededed;
+                    text-align: left;
+                    overflow: hidden;
+                    z-index: 999;
+
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: visibility 0.3s ease, opacity 0.3s ease;
+
+                    & li {
+                        width: 100%;
+                        border-left: none;
+                        border-bottom: 1px solid #ededed;
+
+                        &:last-child {
+                            border-right: none;
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// // for mobile phone
+@include media-breakpoint-only(xs) {
+    .header_top {
+        padding-bottom: 20px;
+        .header_contact_us {
+            padding: 0;
+            text-align: center;
+            padding: 10px 10px;
+            & li {
+                font-size: 1.5rem;
+
+                & a {
+                    font-size: inherit;
+                }
+            }
+        }
+
+        .header_account_area {
+            & ul:first-child {
+                justify-content: center;
+            }
+
+            & li {
+                padding: 0 10px;
+                & a {
+                    line-height: 30px;
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+// // for mobile phone
+@include media-breakpoint-only(sm) {
+    .header_top {
+        padding-bottom: 20px;
+        .header_contact_us {
+            padding: 5px 0;
+
+            text-align: center;
+            padding: 10px 10px;
+            & li {
+                font-size: 1.5rem;
+
+                & a {
+                    font-size: inherit;
+                }
+            }
+        }
+
+        .header_account_area {
+            & ul:first-child {
+                justify-content: center;
+            }
+
+            & li {
+                padding: 0 10px;
+                & a {
+                    line-height: 30px;
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+// for tablet
+@include media-breakpoint-only(md) {
+    .header_top {
+        padding-bottom: 20px;
+
+        .header_contact_us {
+            padding: 5px 0;
+            text-align: center;
+            padding: 10px 10px;
+            & li {
+                font-size: 1.5rem;
+
+                & a {
+                    font-size: inherit;
+                }
+            }
+        }
+
+        .header_account_area {
+            & ul:first-child {
+                justify-content: center;
+            }
+
+            & li {
+                & a {
+                    padding-bottom: 10px;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    // to-check
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}

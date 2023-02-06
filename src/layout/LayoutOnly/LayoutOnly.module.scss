@@ -1,0 +1,25 @@
+.wrapper {
+    display: grid;
+    gap: 5px;
+    // height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: 212px;
+    grid-template-rows: auto 3fr 180px;
+    grid-template-areas:
+        'header header header header'
+        'content content content content'
+        ' footer footer footer footer';
+}
+
+.header {
+    grid-area: header;
+}
+
+.main-content {
+    grid-area: content;
+    background: #fff;
+    height: auto;
+}
+.footer {
+    grid-area: footer;
+}

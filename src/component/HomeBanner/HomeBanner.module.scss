@@ -1,0 +1,42 @@
+.home-banner {
+    // background: #f7f7f7;
+    padding: 60px 0;
+
+    & .home_banner_style1 {
+        padding: 50px 0;
+        border: 10px solid #fff;
+        text-align: center;
+        cursor: pointer;
+        & h3 {
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: 600;
+            line-height: 25px;
+            margin-bottom: 9px;
+            color: #232323;
+        }
+        & .banner_text_img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & p {
+                margin-bottom: 0;
+                margin-right: 5px;
+                color: #232323;
+            }
+            & img:hover {
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+    & .one {
+        background: #fbf0c3;
+    }
+    & .two {
+        background: #fedec7;
+    }
+    & .three {
+        background: #c8e0e4;
+    }
+}
